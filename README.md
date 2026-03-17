@@ -9,3 +9,20 @@ Tested on my Macbook Neo and MacOS Tahoe
 # Instructions
 
 Unzip and move Steam to /Applications, then launch to update.
+
+
+# Verification
+
+If you wish to verify file wasn't tampered with, use:
+```
+$ codesign --verify --deep --strict --verbose=2 Steam.app
+```
+Example output:
+
+> --prepared:/Applications/Steam.app/Contents/Frameworks/crashhandler.dylib
+> --validated:/Applications/Steam.app/Contents/Frameworks/crashhandler.dylib
+> --prepared:/Applications/Steam.app/Contents/Frameworks/Breakpad.framework/Versions/Current/.
+> --validated:/Applications/Steam.app/Contents/Frameworks/Breakpad.framework/Versions/Current/.
+> Steam.app: valid on disk
+> Steam.app: satisfies its Designated Requirement
+
